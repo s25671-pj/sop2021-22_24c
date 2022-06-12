@@ -3,6 +3,9 @@ nano (komenda uruchamia dostepny edytor tekstowy)
 w edytorze -> echo "Witamy w terminalu" //echo wypisuje linie tekstu zawarta w cudzyslowach
 uzywam kombinacji klawiszy "ALT + X" aby zamknac edytor; edytor zapyta o to czy jestem pewny -> "Y" potwierdzam; 
 zarząda podania nazwy nowopowstalego pliku, uzylem "z2cw1";
+
+//aby uruchomić na szuflandii należy dodać uprawnienia poprzez "chmod u+rwx nazwa_pliku"
+
 po zamknieciu edytora w terminalu wpisuje "./z2cw1";
 wyswietla sie:
 
