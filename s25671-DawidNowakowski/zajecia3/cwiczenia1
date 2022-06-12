@@ -53,11 +53,11 @@ _______________________________________________________
 
 #!/bin/bash
 
-X=`tree | wc -l`            // [update] doszedlem do wniosku, ze "locate --a ./" nie jest potrzebne
+X=`tree -FL 3 | grep -v /$ | wc -l`            // [update] 
 
 let Y=($X-3)                // wynik pomniejszam o 3 aby nie uwzglednic aktualnego katalogu wyswietlanego przez "tree" w pierwszej linii, oraz dwoch ostatnich linii (przerwy i informacji o ilosci plikow itd.)
 
-if [[ $Y > 4 ]]
+if [ $Y -gt 4 ]
   then
       echo "Katalog zawiera conajmniej 5 plikow"
   else
