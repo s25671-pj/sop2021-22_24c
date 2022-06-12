@@ -1,0 +1,65 @@
+nano z4cw1      // w nano, po zapisaniu chmod u+rwx ./z4cw1 i tak odpowiednio dla kolejnych przykladow
+_______________________________________________________
+
+Cwiczenie 1.1
+
+#include <iostream>
+
+int main()
+{
+  int X=0;
+  int Y=0;
+  std::cout<<"Podaj liczbe: ";
+  std::cin>>X;
+  std::cout<<"Podaj druga liczbe: ";
+  std::cin>>Y;  
+  int Z=X+Y;
+  std::cout<<"suma liczb to: ";
+  std::cout<<Z<<std::endl;
+  return 0;
+}
+
+_______________________________________________________
+
+Cwiczenie 1.2
+
+#include <iostream>
+
+int main()
+{
+  int X=0;
+  int Y=0;
+  std::cout<<"Podaj liczbe: ";
+  std::cin>>X;
+  std::cout<<"Podaj druga liczbe: ";
+  std::cin>>Y;  
+  int Z=X+Y;
+  std::cout<<"suma liczb to: "<<Z<<std:endl;
+  return Z;
+}
+
+_______________________________________________________
+
+Cwiczenie 1.3
+
+#include <iostream>
+#include <cstdlib>
+
+int main(int argc, char** argv){
+
+  int H = atoi(argv[1]);
+    for(int i = 0; i < H; i++){
+      for(int j = 0; j < (H-i-1); j++){
+        std::cout<<" ";
+      }
+      for(int k = 0; k < (i*2)+1; k++){
+        if((k%3)==0){
+          std::cout<<"@";
+        }else{
+          std::cout<<"*";
+      }
+      std::cout<<std::endl;
+    }
+    
+return 0;
+}
