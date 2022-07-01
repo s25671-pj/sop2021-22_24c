@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stdio.h>
+
+int main(int argc, char* argv[]) {
+
+    FILE *plik = fopen("zad.txt","r");
+    int x, y, i, a;
+    int tab[10];
+
+    fscanf(plik,"%d",&x);
+
+    while(fscanf(plik, "%d",&y) > 0){
+        tab[i] = y;
+        i++;
+    }
+
+    a = x;
+    std::cout << "Ilosc liczb: " << a << std::endl;
+
+    if(argc == 2){
+        std::cout << "Ciag liczb: " << std::endl;
+        for(int j=0; j < x; j++){
+            std::cout << tab[j] << std::endl;
+        }
+        fclose(plik);
+    }else if(argc == 1){
+        std::cout << "Odwrotnie: " << std::endl;
+        for(int q=x-1; q > x; q--){
+            std::cout << tab[q] << std::endl;
+        }
+        fclose(plik);
+    }else{
+        cout<<"podano za dużo argumentow"<<endl;
+    }
+    return 0;
+}
